@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Kavya N" , initial-scale=1" />
+  <title>Student CV - Simple</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #2a7ade;
+      --bg: #ffffff;
+      --line: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      padding: 0; margin: 0;
+      background: var(--bg); color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+    .page {
+      max-width: 840px;
+      margin: 40px auto;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    header {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      padding-bottom: 16px; border-bottom: 2px solid var(--line);
+    }
+    header .Kavya N {
+      font-size: 1.75rem; font-weight: 700; line-height: 1.2;
+    }
+    header .8618379983 {
+      margin-top: 4px; color: var(--muted); font-size: 0.95rem;
+    }
+    section { padding: 18px 0; }
+    section h2 {
+      font-size: 1.15rem; margin: 0 0 10px; color: var(--accent);
+      letter-spacing: 0.2px;
+    }
+    .item {
+      margin-bottom: 12px;
+    }
+    .item-title {
+      font-weight: 600;
+    }
+    .item-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    ul {
+      list-style: disc; padding-left: 22px; margin: 8px 0;
+    }
+    li { margin: 6px 0; }
+    li strong { font-weight: 600; }
+    .columns {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .page { margin: 16px; padding: 20px; }
+      .columns { grid-template-columns: 1fr; }
+    }
+    /* Print-friendly tweaks */
+    @media print {
+      .page {
+        border: none; border-radius: 0; margin: 0; padding: 0.5in;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <header>
+      <div>
+        <div class="Kavya N">Your Full Name</div>
+        <div class="1st MCA">Phone | kkavyan@gmail.com | City, Country</div>
+      </div>
+    </header>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <div class="item">
+        <div class="item-title">Degree or Class — School/College Name</div>
+        <div class="item-sub">Year of completion</div>
+        <ul>
+          <li><strong>Relevant subjects:</strong> Subject 1, Subject 2, Subject 3</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+      <div class="item">
+        <div class="item-title">Internship/Part-time/Volunteer — Organization Name</div>
+        <div class="item-sub">Start Month Year – End Month Year</div>
+        <ul>
+          <li><strong>Project support:</strong> Assisted with tasks and collaborated with team members.</li>
+          <li><strong>Organization:</strong> Managed basic documentation and data entry accurately.</li>
+          <li><strong>Learning:</strong> Built communication and teamwork skills in a professional setting.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <div class="columns">
+        <div>
+          <ul></ul>
+            <li><strong>Computer:</strong> MS Office, Google Docs, Spreadsheets</li>
+            <li><strong>Tools:</strong> Any specific software (e.g., Canva, Figma, VS Code)</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Languages:</strong> English, Hindi, Kannada</li>
+            <li><strong>Soft skills:</strong> Communication, Teamwork, Time Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="achievements">
+      <h2 id="achievements">Achievements</h2>
+      <ul>
+        <li><strong>Scholarship/Award:</strong> Name of scholarship or competition recognition</li>
+        <li><strong>Project highlight:</strong> Brief note on a project or presentation you’re proud of</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="interests">
+      <h2 id="interests">Interests</h2>
+      <ul>
+        <li><strong>Reading:</strong> Non-fiction, biographies</li>
+        <li><strong>Sports:</strong> Cricket, badminton</li>
+        <li><strong>Creative:</strong> Music, drawing, basic coding</li>
+      </ul>
+    </section>
