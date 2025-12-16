@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student CV — Your Name</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --accent: #0ea5e9;
+      --border: #e5e7eb;
+    }
+
+    /* Base reset */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 980px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+
+    .cv {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+    }
+
+    /* Header */
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      padding: 32px;
+      background: linear-gradient(120deg, rgba(37,99,235,0.08), rgba(14,165,233,0.08));
+      border-bottom: 1px solid var(--border);
+    }
+    .title-block h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.2px;
+    }
+    .title-block p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      justify-content: center;
+      text-align: right;
+      font-size: 0.95rem;
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Body grid */
+    .body {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 24px;
+      padding: 24px 24px 32px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 22px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+    }
+    .section-title::before {
+      content: "";
+      width: 18px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* Lists & items */
+    .item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .item h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .meta {
+      margin: 4px 0 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .tag {
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      background: #eef2ff;
+      color: #3b82f6;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+    }
+
+    ul.bullets {
+      margin: 8px 0 0 18px;
+    }
+    ul.bullets li {
+      margin-bottom: 6px;
+    }
+
+    /* Sidebar cards */
+    .card {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fcfdff;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 16px 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: #fafbfe;
+    }
+
+    /* Links */
+    a.inline {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px dotted #c7d2fe;
+    }
+    a.inline:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .body { grid-template-columns: 1fr; }
+      .contact { text-align: left; }
+      .header { grid-template-columns: 1fr; }
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; }
+      .container { margin: 0; padding: 0; }
+      .cv { box-shadow: none; border: none; }
+      .header { background: none; }
+      a.inline { text-decoration: underline; border: none; color: #000; }
+      .footer { background: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <article class="cv">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="title-block">
+          <h1>Your Name</h1>
+          <p>Undergraduate in Computer Science • Passionate about AI, web development, and hackathons</p>
+        </div>
+        <div class="contact">
+          <div>Maddur, Karnataka, India</div>
+          <div><a href="mailto:youremail@example.com">youremail@example.com</a></div>
+          <div><a href="tel:+919XXXXXXXXX">+91 9XXXXXXXXX</a></div>
+          <div><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a></div>
+          <div><a href="https://github.com/yourhandle" target="_blank" rel="noopener">github.com/yourhandle</a></div>
+          <div><a href="https://yourportfolio.com" target="_blank" rel="noopener">yourportfolio.com</a></div>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="body">
+
+        <!-- Main column -->
+        <div>
+
+          <section>
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+              <h3>ABC Institute of Technology — B.E. in Computer Science</h3>
+              <div class="meta">Aug 2022 – May 2026 • GPA: 8.7/10 • Maddur, KA</div>
+              <ul class="bullets">
+                <li>Relevant coursework: Data Structures, Algorithms, Databases, Operating Systems, Computer Networks</li>
+                <li>Awards: Merit Scholarship (2023), Hackathon Winner (State Level)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Projects</h2>
+            <div class="item">
+              <h3>Smart Attendance System (Face Recognition)</h3>
+              <div class="meta">Python, OpenCV, Flask • Team of 3</div>
+              <ul class="bullets">
+                <li>Reduced manual errors by implementing face detection and CSV export with 98% match accuracy on test set</li>
+                <li>Built a Flask dashboard to visualize daily attendance and trigger alerts</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Flask</span><span class="tag">Pandas</span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Campus Companion App</h3>
+              <div class="meta">React Native, Firebase • Solo</div>
+              <ul class="bullets">
+                <li>Launched an app with event schedules, bus timings, and lost-and-found; reached 500+ student installs</li>
+                <li>Implemented push notifications and offline caching to improve reliability</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">UX</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Experience</h2>
+            <div class="item">
+              <h3>Software Intern — XYZ Solutions Pvt. Ltd.</h3>
+              <div class="meta">May 2024 – July 2024 • Bengaluru (Hybrid)</div>
+              <ul class="bullets">
+                <li>Built internal dashboards with Next.js, improving support ticket resolution time by 22%</li>
+                <li>Wrote unit tests and CI workflows, increasing coverage from 55% to 78%</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Jest</span><span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Achievements</h2>
+            <div class="item">
+              <h3>Hackathon Winner — Karnataka Tech Fest</h3>
+              <div class="meta">2024 • Top 1/60 teams</div>
+              <ul class="bullets">
+                <li>Built an ML-based route optimizer for campus logistics under 24 hours</li>
+              </ul>
+            </div>
+            <div class="item">
+              <h3>IEEE Student Chapter — Executive Member</h3>
+              <div class="meta">2023 – Present</div>
+              <ul class="bullets">
+                <li>Organized workshops on Git and cloud fundamentals, attended by 150+ students</li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+
+          <section class="card">
+            <h2 class="section-title">Skills</h2>
+            <div class="item">
+              <h3>Programming</h3>
+              <div class="tag-row">
+                <span class="tag">C++</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Web & Mobile</h3>
+              <div class="tag-row">
+                <span class="tag">HTML/CSS</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">React Native</span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Data & Tools</h3>
+              <div class="tag-row">
+                <span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">Git</span><span class="tag">Docker</span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Soft skills</h3>
+              <ul class="bullets">
+                <li>Communication, teamwork, problem solving, time management</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Certifications</h2>
+            <div class="item">
+              <h3>Google Data Analytics Professional Certificate</h3>
+              <div class="meta">2024 • Coursera</div>
+            </div>
+            <div class="item">
+              <h3>Responsive Web Design</h3>
+              <div class="meta">2023 • freeCodeCamp</div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Extracurricular</h2>
+            <div class="item">
+              <h3>Open Source Contributor</h3>
+              <div class="meta">2023 – Present</div>
+              <ul class="bullets">
+                <li>Contributed documentation and bug fixes to student-focused projects</li>
+              </ul>
+            </div>
+            <div class="item">
+              <h3>Cricket Team — College</h3>
+              <div class="meta">Bowler • Inter-college tournaments</div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Links</h2>
+            <div class="item">
+              <ul class="bullets">
+                <li><a class="inline" href="https://yourportfolio.com" target="_blank" rel="noopener">Portfolio</a></li>
+                <li><a class="inline" href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a class="inline" href="https://leetcode.com/yourhandle" target="_blank" rel="noopener">LeetCode</a></li>
+                <li><a class="inline" href="https://medium.com/@yourhandle" target="_blank" rel="noopener">Blog</a></li>
+              </ul>
+            </div>
+          </section>
+
+        </aside>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        Available for internships from May 2026 • Open to roles in Bengaluru, Mysuru, and remote
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
